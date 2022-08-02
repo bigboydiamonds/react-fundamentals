@@ -15,9 +15,10 @@
     // 💰 {message({children: 'Hello World'})} {message({children: 'Goodbye World'})}
     const element = (
       <div className="container">
-        {message({children: 'Hello World'})} {message({children: 'Goodbye World'})}
+        {React.createElement(message, {children: 'Hello World'})}
       </div>
     )
+    React.createElement(message, {children: 'Hello World'})
 
     // 💯 This is only the first step to making actual React components. The rest is in the extra credit!
     ReactDOM.createRoot(document.getElementById('root')).render(element)
